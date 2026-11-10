@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель — Smart Support Hub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="dashboard">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">Smart Support Hub<small>Внедрение и сопровождение</small></div>
+    <nav>
+      <a href="index.html" data-page="dashboard">📊 Панель</a>
+      <a href="deployments.html" data-page="deployments">🚀 Внедрения</a>
+      <a href="incidents.html" data-page="incidents">🧯 Инциденты</a>
+      <a href="maintenance.html" data-page="maintenance">🛠 Заявки</a>
+      <a href="releases.html" data-page="releases">📦 Релизы</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="btn secondary small" id="menuToggle" aria-label="Меню">☰</button>
+      <h1>Панель</h1>
+      <span class="version-tag" id="currentVersion">v1.2.1</span>
+      <button class="btn secondary small" id="themeButton" type="button">☀ Светлая</button>
+    </header>
+    <main class="content">
+      <section class="kpis">
+        <div class="kpi"><span>Активных внедрений</span><b id="kpiDeployments">0</b></div>
+        <div class="kpi"><span>Открытых инцидентов</span><b id="kpiIncidents" style="color:var(--yellow)">0</b></div>
+        <div class="kpi"><span>SLA выполнен</span><b id="kpiSla">0%</b></div>
+        <div class="kpi"><span>Текущая версия</span><b id="kpiVersion">v1.2.1</b></div>
+      </section>
+      <section class="charts">
+        <div class="card"><h2>Инциденты по приоритетам</h2><div class="chart-box"><canvas id="priorityChart" aria-label="График инцидентов по приоритетам" role="img"></canvas></div></div>
+        <div class="card"><h2>Заявки по видам сопровождения</h2><div class="chart-box"><canvas id="requestChart" aria-label="График заявок по видам" role="img"></canvas></div></div>
+      </section>
+      <section class="card">
+        <h2>Просроченные инциденты (SLA нарушен)</h2>
+        <div class="table-wrap"><table><thead><tr><th>ID</th><th>Название</th><th>Приоритет</th><th>Статус</th></tr></thead><tbody id="breachedTable"></tbody></table></div>
+      <p class="empty" id="breachedTableEmpty" hidden>Записей нет.</p>
+      </section>
+    </main>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
