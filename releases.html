@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Релизы — Smart Support Hub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="releases">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">Smart Support Hub<small>Внедрение и сопровождение</small></div>
+    <nav>
+      <a href="index.html" data-page="dashboard">📊 Панель</a>
+      <a href="deployments.html" data-page="deployments">🚀 Внедрения</a>
+      <a href="incidents.html" data-page="incidents">🧯 Инциденты</a>
+      <a href="maintenance.html" data-page="maintenance">🛠 Заявки</a>
+      <a href="releases.html" data-page="releases">📦 Релизы</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="btn secondary small" id="menuToggle" aria-label="Меню">☰</button>
+      <h1>Релизы</h1>
+      <span class="version-tag" id="currentVersion">v1.2.1</span>
+      <button class="btn secondary small" id="themeButton" type="button">☀ Светлая</button>
+    </header>
+    <main class="content">
+      <section class="card" style="margin-bottom:18px">
+        <h2>Следующая версия</h2>
+        <p class="hint" style="margin-top:0">Текущая версия: <b id="relCurrent"></b></p>
+        <div class="form-grid">
+          <label>Уровень изменений
+            <select id="levelSelect">
+              <option value="patch">patch — только исправления</option>
+              <option value="minor">minor — новая совместимая возможность</option>
+              <option value="major">major — несовместимые изменения</option>
+            </select>
+          </label>
+          <div><span class="hint" style="margin:0">Подсказка:</span><br><b id="nextVersion" style="font-size:26px"></b></div>
+        </div>
+      </section>
+      <section class="card" style="margin-bottom:18px">
+        <h2>Добавить релиз</h2>
+        <form id="releaseForm" novalidate>
+          <div class="form-grid">
+            <label>Версия<input id="relVersion" placeholder="v1.2.2"></label>
+            <label>Дата<input id="relDate" type="date"></label>
+            <label>Уровень<select id="relLevel"><option value="patch">patch</option><option value="minor">minor</option><option value="major">major</option></select></label>
+          </div>
+          <label style="margin-top:12px">Изменения (по одному в строке)<textarea id="relChanges" rows="3"></textarea></label>
+          <button class="btn" type="submit" style="margin-top:12px">Добавить релиз</button>
+          <p class="form-message" id="releaseMsg" hidden></p>
+        </form>
+      </section>
+      <section>
+        <h2>История версий</h2>
+        <div class="release-list" id="releaseList"></div>
+      </section>
+    </main>
+  </div>
+</div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/releases.js"></script>
+</body>
+</html>
