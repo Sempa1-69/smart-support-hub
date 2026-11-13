@@ -15,7 +15,17 @@ const startIncidents = [
   { id: "INC-004", title: "Медленно загружается список", priority: "medium", status: "resolved", createdAt: "2026-10-30T08:00:00", resolvedAt: "2026-10-31T12:00:00" },
   { id: "INC-005", title: "Не отправляется уведомление", priority: "high", status: "resolved", createdAt: "2026-10-28T10:00:00", resolvedAt: "2026-10-28T17:00:00" },
   { id: "INC-006", title: "Сбой при печати", priority: "medium", status: "new", createdAt: "2026-11-04T09:15:00", resolvedAt: null },
-  { id: "INC-007", title: "Не сохраняется настройка темы", priority: "low", status: "in_progress", createdAt: "2026-11-05T11:00:00", resolvedAt: null }
+  { id: "INC-007", title: "Не сохраняется настройка темы", priority: "low", status: "in_progress", createdAt: "2026-11-05T11:00:00", resolvedAt: null },
+  { id: "INC-008", title: "Не обновляется список клиентов", priority: "low", status: "resolved", createdAt: "2026-10-20T09:00:00", resolvedAt: "2026-10-21T09:00:00" },
+  { id: "INC-009", title: "Долго открывается карточка", priority: "medium", status: "resolved", createdAt: "2026-10-21T10:00:00", resolvedAt: "2026-10-21T20:00:00" },
+  { id: "INC-010", title: "Не приходит код подтверждения", priority: "high", status: "resolved", createdAt: "2026-10-22T08:00:00", resolvedAt: "2026-10-22T14:00:00" },
+  { id: "INC-011", title: "Недоступен вход для всех", priority: "critical", status: "resolved", createdAt: "2026-10-23T09:00:00", resolvedAt: "2026-10-23T12:00:00" },
+  { id: "INC-012", title: "Сбой при экспорте таблицы", priority: "medium", status: "resolved", createdAt: "2026-10-24T11:00:00", resolvedAt: "2026-10-25T09:00:00" },
+  { id: "INC-013", title: "Неверный шрифт в отчёте", priority: "low", status: "resolved", createdAt: "2026-10-25T10:00:00", resolvedAt: "2026-10-27T10:00:00" },
+  { id: "INC-014", title: "Не сохраняется профиль", priority: "high", status: "resolved", createdAt: "2026-10-26T09:00:00", resolvedAt: "2026-10-26T16:00:00" },
+  { id: "INC-015", title: "Ошибка базы при запуске", priority: "critical", status: "resolved", createdAt: "2026-10-27T08:00:00", resolvedAt: "2026-10-27T15:00:00" },
+  { id: "INC-016", title: "Не работает поиск", priority: "medium", status: "resolved", createdAt: "2026-10-28T09:00:00", resolvedAt: "2026-10-29T17:00:00" },
+  { id: "INC-017", title: "Пропали данные в журнале", priority: "high", status: "resolved", createdAt: "2026-10-29T08:00:00", resolvedAt: "2026-10-29T20:00:00" }
 ];
 
 const startRequests = [
