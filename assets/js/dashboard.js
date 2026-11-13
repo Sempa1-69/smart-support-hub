@@ -56,7 +56,7 @@
         datasets: [{
           label: "Инциденты",
           data: levels.map(l => incidents.filter(i => i.priority === l).length),
-          backgroundColor: ["#c2385a", "#e0b873", "#a58aa8", "#8fcfa8"],
+          backgroundColor: ["#ff3d6e", "#ffb020", "#b05cff", "#1fd6a0"],
           borderRadius: 8
         }]
       },
@@ -76,7 +76,8 @@
         labels: types.map(t => TYPE_NAMES[t]),
         datasets: [{
           data: types.map(t => requests.filter(r => r.type === t).length),
-          backgroundColor: ["#c2385a", "#e0b873", "#8fcfa8", "#a58aa8"],
+          backgroundColor: ["#ff3d6e", "#ffb020", "#1fd6a0", "#b05cff"],
+          borderWidth: 3,
           borderColor: document.body.classList.contains("light") ? "#ffffff" : "#1d0e15"
         }]
       },
